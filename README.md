@@ -8,24 +8,33 @@ spark = SparkSession.builder.appName("BCWPerceptron").getOrCreate()
 ```
 
 
-``` bash from pyspark.sql import SparkSession ```: importe la classe pour créer une session Spark (point d’entrée vers l’API Spark).
+``` bash 
+from pyspark.sql import SparkSession
+```
+: importe la classe pour créer une session Spark (point d’entrée vers l’API Spark).
 
-``` bash from pyspark.sql.functions import when, col ```: importe des fonctions utilitaires Spark SQL (when pour conditions, col pour référencer une colonne).
+``` bash from pyspark.sql.functions import when, col ```
+: importe des fonctions utilitaires Spark SQL (when pour conditions, col pour référencer une colonne).
 
-``` bash spark = SparkSession.builder...getOrCreate() ``` : crée (ou récupère) une SparkSession nommée "BCWPerceptron". C’est nécessaire pour lire des fichiers et exécuter des transformations.
+``` bash spark = SparkSession.builder...getOrCreate() ``` 
+: crée (ou récupère) une SparkSession nommée "BCWPerceptron". C’est nécessaire pour lire des fichiers et exécuter des transformations.
 
 ## 2) Chargement et nettoyage des données
 ``` bash
 df = spark.read.csv("bcw_data.csv", header=True, inferSchema=True)
 ```
-Charge le CSV bcw_data.csv. ``` bash header=True ``` indique qu’il y a une ligne d’en-tête ; ``` bash inferSchema=True demande ``` à Spark d’essayer de deviner les types de colonnes.
+Charge le CSV bcw_data.csv.
+``` bash header=True ``` 
+indique qu’il y a une ligne d’en-tête ;
+``` bash inferSchema=True```
+demande à Spark d’essayer de deviner les types de colonnes.
 ``` bash
 df = df.drop("id", "Unnamed: 32")
 ```
 Supprime les colonnes inutiles id et la colonne vide Unnamed: 32 (la colonne « vide » qui apparaît souvent avec ce dataset).
-
+``` bash
 df = df.withColumn("label", when(col("diagnosis") == "M", 1).otherwise(-1))
-
+```
 
 Crée une nouvelle colonne label : si diagnosis == "M" → 1 (malin), sinon -1 (bénin). On encode ainsi la cible pour notre perceptron (signe +1 / -1).
 
