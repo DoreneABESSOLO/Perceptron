@@ -243,7 +243,7 @@ Affiche un message de suivi avec le nombre d’erreurs agrégé (utile pour le d
 
 Après toutes les époques, retourne un PerceptronModel initialisé avec les poids appris.
 
-5) Pipeline et entraînement
+## 5) Pipeline et entraînement
 ``` bash
 perceptron = PerceptronClassifier(lr=0.01, epochs=20)
 pipeline = Pipeline(stages=[perceptron])
@@ -265,7 +265,7 @@ Applique le modèle entraîné au DataFrame (méthode _transform du PerceptronMo
 
 Affiche les 10 premières lignes de df_pred.
 
-6) Évaluation : Accuracy
+## 6) Évaluation : Accuracy
 ``` bash
 from pyspark.sql.functions import avg
 
