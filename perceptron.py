@@ -1,7 +1,7 @@
 import numpy as np
 
 class Perceptron:
-    def __init__(self, n_features, lr=0.1, epochs=100):
+    def __init__(self, n_features, lr=0.1, epochs=110):
         self.lr = lr
         self.epochs = epochs
         self.weights = np.zeros(n_features)
