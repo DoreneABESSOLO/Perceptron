@@ -10,7 +10,7 @@ pour mieux comprendre le déroulement des vérifications.
 import numpy as np
 import pytest
 import logging
-from src/perceptron import Perceptron  # La classe que tu as implémentée dans perceptron.py
+from src.perceptron import Perceptron  # La classe que tu as implémentée dans perceptron.py
 
 # Configuration du logger pour pytest
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
