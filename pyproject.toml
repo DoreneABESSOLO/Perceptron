@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "perceptron"
+version = "0.1.0"
+description = "Un perceptron simple pour tester CI/CD avec pytest"
+authors = [
+  { name="Ton Nom", email="ton.email@example.com" }
+]
+dependencies = [
+    "numpy",
+    "scikit-learn"
+]
