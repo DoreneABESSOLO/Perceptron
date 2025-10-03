@@ -7,7 +7,7 @@ name = "perceptron"
 version = "0.1.0"
 description = "Un perceptron simple pour tester CI/CD avec pytest"
 authors = [
-  { name="Ton Nom", email="ton.email@example.com" }
+  { name="oussamadebbou-coder", email="oussama.debbou@laplateforme.io" }
 ]
 dependencies = [
     "numpy",
