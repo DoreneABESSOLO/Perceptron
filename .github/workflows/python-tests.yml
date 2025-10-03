@@ -26,4 +26,4 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest -v -s --log-cli-level=INFO tests/
+        PYTHONPATH=src pytest -v -s --log-cli-level=INFO --cov=src/perceptron --cov-report=term-missing tests/
