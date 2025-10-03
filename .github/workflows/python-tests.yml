@@ -26,5 +26,5 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest -v
+        pytest -v -s --log-cli-level=INFO tests/
 
