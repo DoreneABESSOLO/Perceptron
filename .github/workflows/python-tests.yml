@@ -26,9 +26,4 @@ jobs:
 
     - name: Run tests
       run: |
-<<<<<<< HEAD
         pytest -v -s --log-cli-level=INFO tests/
-=======
-        pytest -v tests/
->>>>>>> ec1137d05f011b8335a04c371d3901bf3ad1838e
-
