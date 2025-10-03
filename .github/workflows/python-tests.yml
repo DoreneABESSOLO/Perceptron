@@ -26,4 +26,4 @@ jobs:
 
     - name: Run tests
       run: |
-        PYTHONPATH=src pytest -v -s --log-cli-level=INFO --cov=src --cov-report=term-missing tests/
+        PYTHONPATH=$PWD/src pytest -v -s --log-cli-level=INFO --cov=src --cov-report=term-missing tests/
