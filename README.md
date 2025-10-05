@@ -124,5 +124,6 @@ Ce projet démontre comment implémenter un perceptron personnalisé et évaluer
 ## Bibliographie
 - Rosenblatt, F. (1958). The perceptron: A probabilistic model for information storage and organization in the brain.
 - Scikit-learn documentation : https://scikit-learn.org
+
 -Boruta py : https://github.com/scikit-learn-contrib/boruta_py
 - NumPy documentation : https://numpy.org
